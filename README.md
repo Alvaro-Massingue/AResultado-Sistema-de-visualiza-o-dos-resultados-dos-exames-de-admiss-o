@@ -48,6 +48,6 @@ Este projeto tem como objetivo disponibilizar uma interface simples, segura e in
 
 ## Autor
 
-Desenvolvido por **Seu *Alvaro Rui Massingue*
+Desenvolvido por *Alvaro Rui Massingue*
 Entre em contato: [alvaroruimassingue25@gmail.com]
 
