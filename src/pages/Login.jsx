@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div className="w-full bg-linear-to-t from-sky-50 via-sky-50 to-white m-0 flex flex-col items-center gap-10 h-screen">
       <Header isAuthenticated={true} />
-      <div className="w-[90%] h-3/4 bg-white rounded-2xl shadow shadow-gray-400 flex flex-col justify-center items-center gap-2 shrink md:w-[25%]">
+      <div className="w-[90%] h-3/4 bg-white rounded-2xl mt-25 shadow shadow-gray-400 flex flex-col justify-center items-center gap-2 shrink md:w-[25%]">
         <p className="text-red-600 text-sm w-[80%]">{response}</p>
         {errorUser ? (
           <p className=" text-red-600 text-sm w-[80%]">Preencha este campo</p>
