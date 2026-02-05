@@ -13,8 +13,20 @@ const Login = () => {
 
   const login = (userName, password) => {
     if (userName === userAdd.name && password === userAdd.password) {
-      navigate("/adminPanel");
-      setResponse("");
+      const isMobile =
+        /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        );
+
+      if (isMobile) {
+        alert(
+          "O painel de administrador não está disponível em dispositivos móveis.",
+        );
+        navigate("/");
+      } else {
+        navigate("/adminPanel");
+        setResponse("");
+      }
     } else {
       setResponse("Usuario ou senha invalido");
     }
@@ -28,10 +40,9 @@ const Login = () => {
         {errorUser ? (
           <p className=" text-red-600 text-sm w-[80%]">Preencha este campo</p>
         ) : (
-           <p className=" text-gray-700 font-medium w-[80%]">Usuario</p>
+          <p className=" text-gray-700 font-medium w-[80%]">Usuario</p>
         )}
         <input
-        
           className="h-10 w-[80%] border border-gray-400 rounded-2xl text-gray-600 outline-0 focus:border focus:border-blue-500 focus:text-blue-500 pl-3"
           type="text"
           placeholder="Adimin"
@@ -58,7 +69,7 @@ const Login = () => {
               setErrorPass(true);
             } else if (user == "") {
               setErrorUser(true);
-               setErrorPass(false);
+              setErrorPass(false);
             } else if (password == "") {
               setErrorPass(true);
               setErrorUser(false);
