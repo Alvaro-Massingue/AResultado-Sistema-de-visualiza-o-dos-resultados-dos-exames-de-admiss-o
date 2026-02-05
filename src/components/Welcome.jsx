@@ -18,7 +18,7 @@ const Welcome = () => {
   }, [index]);
 
   return (
-    <div className="w-full md:h-100 h-95 p-5 m-0  flex items-center flex-wrap wrap-break-word bg-linear-to-r from-sky-50 via-sky-100 to-white">
+    <div className="w-full md:h-100 h-95 p-5 m-0 mt-20  flex items-center flex-wrap wrap-break-word bg-linear-to-r from-sky-50 via-sky-100 to-white">
       <div className=" basis-full grow shrink">
         <div className="h-3/4 flex justify-center items-center text-center">
           <h1 className="text-2xl font-black bg-linear-to-r from-sky-400 via-blue-500 to-blue-700 bg-clip-text text-transparent md:text-5xl">
