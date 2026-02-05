@@ -1,11 +1,11 @@
-import HeaderAdimin from "../components/HeaderAdimin";
+import Header from "../components/Header";
 import Aside from "../components/Aside";
 import OverView from "../components/Overview";
 
 const AdminPanel = () => {
   return (
     <div>
-      <HeaderAdimin/>
+      <Header isAuthenticated={true} />
       <div className="flex mt-15 md:mt-20">
         <Aside />
         <OverView />
