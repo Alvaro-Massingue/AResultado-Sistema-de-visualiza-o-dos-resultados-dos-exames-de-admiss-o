@@ -31,6 +31,7 @@ const Login = () => {
            <p className=" text-gray-700 font-medium w-[80%]">Usuario</p>
         )}
         <input
+        
           className="h-10 w-[80%] border border-gray-400 rounded-2xl text-gray-600 outline-0 focus:border focus:border-blue-500 focus:text-blue-500 pl-3"
           type="text"
           placeholder="Adimin"

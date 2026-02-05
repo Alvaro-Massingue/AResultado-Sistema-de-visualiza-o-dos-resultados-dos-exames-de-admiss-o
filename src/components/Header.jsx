@@ -32,19 +32,38 @@ const Header = (props) => {
       </div>
       <div className="w-1/2 text-right">
         {props.isAuthenticated ? (
-          <button
+          <div className="flex justify-end">
+            <span
+             onClick={() => navigate("/")}
+              className="material-symbols-outlined  text-white cursor-pointer
+          [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
+            >
+              logout
+            </span>
+            <button
             onClick={() => navigate("/")}
             className="text-white cursor-pointer"
           >
             Sair
           </button>
+          </div>
+          
         ) : (
-          <button
+          <div className="flex justify-end">
+            <span
+              onClick={() => loginPanel()}
+              className="material-symbols-outlined  text-white cursor-pointer
+          [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
+            >
+              login
+            </span>
+             <button
             onClick={() => loginPanel()}
             className="text-white cursor-pointer"
           >
             Login
           </button>
+          </div>         
         )}
       </div>
     </div>

@@ -14,7 +14,14 @@ const HeaderAdimin = (props) => {
       <div className="flex items-center w-1/2">
         <img src={logo} className="w-15 md:w-20" />
       </div>
-      <div className="w-1/2 text-right">
+      <div className="w-1/2 text-right flex justify-end">
+      <span
+             onClick={() => navigate("/")}
+              className="material-symbols-outlined  text-white cursor-pointer
+          [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
+            >
+              logout
+            </span>
         <button
           onClick={() => navigate("/")}
           className="text-white cursor-pointer"
