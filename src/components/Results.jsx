@@ -4,7 +4,7 @@ const Results = (props) => {
       {props.results.map((result) => (
         <div
           key={result.id}
-          className="bg-white rounded-2xl shadow-lg border border-gray-200 shadow-gray-300 font-extralight w-[90%]  p-2"
+          className="bg-white rounded-2xl shadow-lg border border-sky-500 shadow-gray-300 font-extralight w-[90%]  p-2"
         >
           <div className="flex gap-2">
             <p className="text-gray-700 ">Curso:</p>
