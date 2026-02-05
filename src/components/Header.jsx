@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
@@ -10,8 +9,6 @@ const Header = (props) => {
     navigate("/login");
   };
 
-  const [scrolled, setScrolled] = useState(false);
-  
   return (
     <div
       className={"fixed z-10 flex w-full items-center flex-wrap bg-blue-500 shadow  shadow-gray-500 pr-5"}
