@@ -24,7 +24,7 @@ const Aside = () => {
           </span>
           <button
           onClick={() => navigate("/adminPanel")}
-           className="cursor-pointer  hover:text-blue-500">
+           className="cursor-pointer  hover:text-blue-500 focus:text-blue-500">
             Visao geral
           </button>
         </div>
@@ -35,7 +35,7 @@ const Aside = () => {
           >
             edit
           </span>
-          <button className="cursor-pointer  hover:text-blue-500">
+          <button className="cursor-pointer  hover:text-blue-500 focus:text-blue-500">
             Gerir Resultados
           </button>
         </div>
@@ -46,7 +46,7 @@ const Aside = () => {
           >
             add_circle
           </span>
-          <button className="cursor-pointer   hover:text-blue-500">
+          <button className="cursor-pointer   hover:text-blue-500 focus:text-blue-500">
             Adicionar novos resultados
           </button>
         </div>

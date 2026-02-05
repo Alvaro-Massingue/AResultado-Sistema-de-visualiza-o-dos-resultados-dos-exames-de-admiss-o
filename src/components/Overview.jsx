@@ -71,7 +71,7 @@ const OverView = () => {
             return (
               <tbody
                 key={result.id}
-                className="shadow-md shadow-gray-400 text-gray-900"
+                className="shadow-xs shadow-gray-400 text-gray-900"
               >
                 <tr>
                   <td>{result.id}</td>
