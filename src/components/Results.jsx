@@ -1,11 +1,14 @@
 const Results = (props) => {
   return (
-    <div className="flex flex-col items-center gap-10">
+    <div className="flex flex-col items-center shadow-lg shadow-black pt-6 pb-8 gap-10 bg-linear-to-t from-sky-50 via-gray-50 to-white">
       {props.results.map((result) => (
-        <div key={result.id} className="bg-white rounded-2xl w-[90%]  p-2">
+        <div
+          key={result.id}
+          className="bg-white rounded-2xl shadow-lg border border-gray-200 shadow-gray-300 font-extralight w-[90%]  p-2"
+        >
           <div className="flex gap-2">
             <p className="text-gray-700 ">Curso:</p>
-            <p className="font-bold text-blue-500">{result.course}</p>
+            <p className="text-blue-500">{result.course}</p>
           </div>
           <div className="flex gap-2">
             <p className="text-gray-700 ">Periodo:</p>
@@ -13,7 +16,7 @@ const Results = (props) => {
           </div>
           <div className="flex gap-2">
             <p className="text-gray-700 ">Nome:</p>
-            <p className="font-bold">{result.fullName}</p>
+            <p className="font-medium">{result.fullName}</p>
           </div>
           <div className="flex gap-2">
             <p className="text-gray-700 ">Resultado:</p>

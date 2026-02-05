@@ -1,13 +1,32 @@
 import Header from "../components/Header";
 import Results from "../components/Results";
 import SearchResults from "../components/SearchResults";
+import Welcome from "../components/Welcome";
+import { resultsMock } from "../data/results.mock";
+import { useEffect, useState } from "react";
 
-export default function HomePage(props) {
+export default function HomePage() {
+  const [results, setResults] = useState([]);
+
+  const seeResult = (course, period) => {
+    if (course != "" && period != "") {
+      let newResult = resultsMock.filter(
+        (result) => result.course === course && result.period === period,
+      );
+      setResults(newResult);
+    }
+  };
+
+  useEffect(() => {
+    setResults([]);
+  }, []);
+
   return (
-    <div className="bg-gray-200 overflow-x-hidden">
-      <Header />
-      <SearchResults seeResult={props.seeResult} results={props.results} />
-      <Results results={props.results} />
+    <div className="overflow-x-hidden ">
+      <Header isAuthenticated={false} />
+      <Welcome />
+      <SearchResults seeResult={seeResult} results={results} />
+      <Results results={results} />
     </div>
   );
 }

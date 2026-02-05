@@ -53,7 +53,6 @@ export const resultsMock = [
     status: "Reprovado",
   },
 
-
   // ECONOMIA E NEGÓCIOS
 
   {
@@ -80,7 +79,6 @@ export const resultsMock = [
     average: 8.5,
     status: "Reprovado",
   },
-
 
   // RELAÇÕES INTERNACIONAIS E DIPLOMACIA (RID)
 
@@ -109,7 +107,6 @@ export const resultsMock = [
     status: "Reprovado",
   },
 
-  
   // ADMINISTRAÇÃO PÚBLICA
 
   {
@@ -132,6 +129,92 @@ export const resultsMock = [
     grades: {
       portugues: 9,
       historia: 10,
+    },
+    average: 9.5,
+    status: "Reprovado",
+  },
+
+  {
+    id: 11,
+    fullName: "Emerspn Sergio",
+    period: "Laboral",
+    course: "Engenharia em Tecnologias e Sistemas de Informação",
+    grades: {
+      matematica: 15,
+      fisica: 14,
+    },
+    average: 14.5,
+    status: "Aprovado",
+  },
+  {
+    id: 12,
+    fullName: "Juvencio Jonas",
+    period: "Pós-laboral",
+    course: "Engenharia em Tecnologias e Sistemas de Informação",
+    grades: {
+      matematica: 10,
+      fisica: 9,
+    },
+    average: 9.5,
+    status: "Reprovado",
+  },
+  {
+    id: 13,
+    fullName: "Alvaro Rui Massingue",
+    period: "Laboral",
+    course: "Engenharia em Tecnologias e Sistemas de Informação",
+    grades: {
+      matematica: 15,
+      fisica: 14,
+    },
+    average: 14.5,
+    status: "Aprovado",
+  },
+  {
+    id: 14,
+    fullName: "Nelson Jorge",
+    period: "Pós-laboral",
+    course: "Engenharia em Tecnologias e Sistemas de Informação",
+    grades: {
+      matematica: 10,
+      fisica: 9,
+    },
+    average: 9.5,
+    status: "Reprovado",
+  },
+  {
+    id: 15,
+    fullName: "João Langa",
+    period: "Laboral",
+    course: "Engenharia em Tecnologias e Sistemas de Informação",
+    grades: {
+      matematica: 15,
+      fisica: 14,
+    },
+    average: 14.5,
+    status: "Aprovado",
+  },
+  {
+    id: 16,
+    fullName: "Hamilton Guirrugo",
+    period: "Pós-laboral",
+    course: "Engenharia em Tecnologias e Sistemas de Informação",
+    grades: {
+      matematica: 10,
+      fisica: 9,
+    },
+    average: 9.5,
+    status: "Reprovado",
+  },
+
+  {
+    id: 17,
+    fullName: "Jefferson Eduardo",
+    period: "Laboral",
+    course: "Economia e Negócios",
+    grades: {
+      matematica: 10,
+      fisica: 9,
     },
     average: 9.5,
     status: "Reprovado",

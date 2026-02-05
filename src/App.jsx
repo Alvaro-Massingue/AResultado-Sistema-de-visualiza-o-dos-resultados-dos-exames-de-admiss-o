@@ -1,26 +1,18 @@
 import HomePage from "./pages/HomePage";
-import { Routes, Route } from "react-router-dom";
-import { resultsMock } from "./data/results.mock";
-import { useEffect, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Login from "./pages/Login";
+import AdminPanel from "./pages/Admin";
 
 const App = () => {
-  const [results, setResults] = useState([]);
-
-  const seeResult = (course, period) => {
-    if (course != "" && period != "") {
-      let newResult = resultsMock.filter(
-        (result) => result.course === course && result.period === period,
-      );
-      setResults(newResult);
-    }
-  };
-
+  
   return (
     <Routes>
       <Route
         path="/"
-        element={<HomePage results={results} seeResult={seeResult} />}
+        element={<HomePage />}
       />
+      <Route path="/login" element={<Login />} />
+      <Route path="/adminPanel" element={<AdminPanel />} />
     </Routes>
   );
 };
