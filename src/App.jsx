@@ -12,7 +12,7 @@ const App = () => {
         element={<HomePage />}
       />
       <Route path="/login" element={<Login />} />
-      <Route path="/adminPanel" element={<AdminPanel />} />
+      <Route path="/adminPanel/overview" element={<AdminPanel />} />
     </Routes>
   );
 };

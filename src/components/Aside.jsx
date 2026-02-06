@@ -30,7 +30,7 @@ const Aside = () => {
             dashboard
           </span>
           <button
-            onClick={() => navigate("/adminPanel")}
+            onClick={() => navigate("/adminPanel/overview")}
             className={
               focus
                 ? "text-blue-500"

@@ -24,7 +24,7 @@ const Login = () => {
         );
         navigate("/");
       } else {
-        navigate("/adminPanel");
+        navigate("/adminPanel/overview");
         setResponse("");
       }
     } else {
