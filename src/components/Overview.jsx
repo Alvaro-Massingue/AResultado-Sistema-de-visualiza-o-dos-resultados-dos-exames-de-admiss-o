@@ -15,12 +15,12 @@ const OverView = () => {
           <h1 className="font-bold text-7xl ml-3 ">{resultsMock.length}</h1>
           <div className="flex items-center ml-5">
             <span
-              className="material-symbols-outlined text-blue-500 
+              className="material-symbols-outlined text-sky-500 
           [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
             >
               groups
             </span>
-            <p className="text-xl ml-3 font-light text-blue-500 font-gray-700">
+            <p className="text-xl ml-3 font-light text-sky-500 font-gray-700">
               Candidatos
             </p>
           </div>
@@ -56,7 +56,7 @@ const OverView = () => {
       </div>
       <div className="h-full p-5">
         <table className="w-full text-center">
-          <thead className="shadow-md bg-blue-500 border border-blue-200 text-white">
+          <thead className="shadow-md bg-sky-500 border border-blue-200 text-white">
             <tr>
               <th>ID</th>
               <th>Nome</th>

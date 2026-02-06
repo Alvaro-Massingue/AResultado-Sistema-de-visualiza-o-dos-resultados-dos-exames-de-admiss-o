@@ -24,7 +24,7 @@ const Login = () => {
         );
         navigate("/");
       } else {
-        navigate("/adminPanel/overview");
+        navigate("/adminPanel");
         setResponse("");
       }
     } else {
@@ -43,7 +43,7 @@ const Login = () => {
           <p className=" text-gray-700 font-medium w-[80%]">Usuario</p>
         )}
         <input
-          className="h-10 w-[80%] border border-gray-400 rounded-2xl text-gray-600 outline-0 focus:border focus:border-blue-500 focus:text-blue-500 pl-3"
+          className="h-10 w-[80%] border border-gray-400 rounded-2xl text-gray-600 outline-0 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="text"
           placeholder="Adimin"
           value={user}
@@ -55,14 +55,14 @@ const Login = () => {
           <p className=" text-gray-700 font-medium w-[80%]">Palavra-passe</p>
         )}
         <input
-          className="h-10 w-[80%] border border-gray-400 rounded-2xl outline-0 text-gray-600 focus:border focus:border-blue-500 focus:text-blue-500 pl-3"
+          className="h-10 w-[80%] border border-gray-400 rounded-2xl outline-0 text-gray-600 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="password"
           placeholder="Palavra-passe"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
         <button
-          className="w-[80%] h-10 bg-blue-500 text-white rounded-2xl mt-5 cursor-pointer md:hover:border md:hover:bg-blue-700"
+          className="w-[80%] h-10 bg-sky-500 text-white rounded-2xl mt-5 cursor-pointer md:hover:border md:hover:bg-blue-700"
           onClick={() => {
             if (user == "" && password == "") {
               setErrorUser(true);

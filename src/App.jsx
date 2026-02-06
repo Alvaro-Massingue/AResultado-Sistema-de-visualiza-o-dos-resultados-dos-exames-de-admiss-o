@@ -11,8 +11,14 @@ const App = () => {
         path="/"
         element={<HomePage />}
       />
-      <Route path="/login" element={<Login />} />
-      <Route path="/adminPanel/overview" element={<AdminPanel />} />
+      <Route 
+      path="/login" 
+      element={<Login />} 
+      />
+      <Route 
+      path="/adminPanel" 
+      element={<AdminPanel />} 
+      />
     </Routes>
   );
 };

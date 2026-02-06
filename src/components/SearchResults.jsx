@@ -103,7 +103,7 @@ const SearchResults = (props) => {
             setErrorp(false);
           }
         }}
-        className="border border-blue-500 bg-blue-500 mt-5 md:mt-0 text-white outline-0 cursor-pointer rounded-2xl h-10 basis-70 shrink grow-0 md:hover:border md:hover:bg-blue-700 md:basis-40"
+        className="border border-sky-500 bg-sky-500 mt-5 md:mt-0 text-white outline-0 cursor-pointer rounded-2xl h-10 basis-70 shrink grow-0 md:hover:border md:hover:bg-blue-700 md:basis-40"
       >
         Vizualizar
       </button>

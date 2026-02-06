@@ -1,46 +1,44 @@
-import { useEffect, useState } from "react";
 import { userAdd } from "../data/user.mock";
 import { useNavigate } from "react-router-dom";
 
-const Aside = () => {
-  const [focusView, setFocusView] = useState(false);
-  const [focusManage, setFocusManage] = useState(false);
-  const [focusAdd, setFocusAdd] = useState(false);
-
-  useEffect(() => {
-    setFocusView(true);
-  }, []);
-
+const Aside = ({
+  focusView,
+  focusManage,
+  focusAdd,
+  setFocusView,
+  setFocusManage,
+  setFocusAdd,
+}) => {
   const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center justify-center w-[25%] h-full shadow-lg shadow-gray-600 fixed">
       <div className="h-[10%] w-full pl-4 pt-5 mb-10 shadow-lg flex gap-3">
         <span
-          className="material-symbols-outlined text-blue-500 
+          className="material-symbols-outlined text-sky-500 
           [font-variation-settings:'FILL'_1,'wght'_800,'GRAD'_0,'opsz'_24]"
         >
           person
         </span>
-        <p className="text-blue-500">{userAdd.name}</p>
+        <p className="text-sky-500">{userAdd.name}</p>
       </div>
       <nav className="h-[90%] flex flex-col gap-4 w-[90%] items-start text-gray-900">
         <div className="flex items-center w-full p-4 text-start shadow-2xs gap-2">
           <span
-            className="material-symbols-outlined text-blue-500 
+            className="material-symbols-outlined text-sky-500 
           [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
           >
             dashboard
           </span>
           <button
             onClick={() => {
-              navigate("/adminPanel/overview");
+              setFocusView(true);
               setFocusAdd(false);
               setFocusManage(false);
             }}
             className={
               focusView
-                ? "text-blue-500"
-                : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+                ? "text-sky-500"
+                : "cursor-pointer  hover:text-sky-500 focus:text-sky-500"
             }
           >
             Visao geral
@@ -48,7 +46,7 @@ const Aside = () => {
         </div>
         <div className="flex items-center w-full p-4 text-start shadow-2xs gap-2">
           <span
-            className="material-symbols-outlined text-blue-500 
+            className="material-symbols-outlined text-sky-500 
           [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
           >
             edit
@@ -59,10 +57,10 @@ const Aside = () => {
               setFocusAdd(false);
               setFocusManage(true);
             }}
-           className={
+            className={
               focusManage
-                ? "text-blue-500"
-                : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+                ? "text-sky-500"
+                : "cursor-pointer  hover:text-sky-500 focus:text-sky-500"
             }
           >
             Gerir Resultados
@@ -70,7 +68,7 @@ const Aside = () => {
         </div>
         <div className="flex items-center w-full p-4 text-start shadow-2xs gap-2">
           <span
-            className="material-symbols-outlined text-blue-500 
+            className="material-symbols-outlined text-sky-500 
           [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
           >
             add_circle
@@ -83,8 +81,8 @@ const Aside = () => {
             }}
             className={
               focusAdd
-                ? "text-blue-500"
-                : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+                ? "text-sky-500"
+                : "cursor-pointer  hover:text-sky-500 focus:text-sky-500"
             }
           >
             Adicionar novos resultados

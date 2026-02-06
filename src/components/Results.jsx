@@ -8,7 +8,7 @@ const Results = (props) => {
         >
           <div className="flex gap-2">
             <p className="text-gray-700 ">Curso:</p>
-            <p className="text-blue-500">{result.course}</p>
+            <p className="text-sky-500">{result.course}</p>
           </div>
           <div className="flex gap-2">
             <p className="text-gray-700 ">Periodo:</p>
