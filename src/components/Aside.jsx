@@ -1,7 +1,14 @@
+import { useEffect, useState } from "react";
 import { userAdd } from "../data/user.mock";
 import { useNavigate } from "react-router-dom";
 
 const Aside = () => {
+  const [focus, setFocus] = useState(false);
+
+  useEffect(() => {
+    setFocus(true);
+  }, []);
+
   const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center justify-center w-[25%] h-full shadow-lg shadow-gray-600 fixed">
@@ -23,8 +30,13 @@ const Aside = () => {
             dashboard
           </span>
           <button
-          onClick={() => navigate("/adminPanel")}
-           className="cursor-pointer  hover:text-blue-500 focus:text-blue-500">
+            onClick={() => navigate("/adminPanel")}
+            className={
+              focus
+                ? "text-blue-500"
+                : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+            }
+          >
             Visao geral
           </button>
         </div>
@@ -35,7 +47,12 @@ const Aside = () => {
           >
             edit
           </span>
-          <button className="cursor-pointer  hover:text-blue-500 focus:text-blue-500">
+          <button
+            onClick={() => {
+              setFocus(false);
+            }}
+            className="cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+          >
             Gerir Resultados
           </button>
         </div>
@@ -46,7 +63,12 @@ const Aside = () => {
           >
             add_circle
           </span>
-          <button className="cursor-pointer   hover:text-blue-500 focus:text-blue-500">
+          <button
+            onClick={() => {
+              setFocus(false);
+            }}
+            className="cursor-pointer   hover:text-blue-500 focus:text-blue-500"
+          >
             Adicionar novos resultados
           </button>
         </div>
