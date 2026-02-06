@@ -3,10 +3,12 @@ import { userAdd } from "../data/user.mock";
 import { useNavigate } from "react-router-dom";
 
 const Aside = () => {
-  const [focus, setFocus] = useState(false);
+  const [focusView, setFocusView] = useState(false);
+  const [focusManage, setFocusManage] = useState(false);
+  const [focusAdd, setFocusAdd] = useState(false);
 
   useEffect(() => {
-    setFocus(true);
+    setFocusView(true);
   }, []);
 
   const navigate = useNavigate();
@@ -30,9 +32,13 @@ const Aside = () => {
             dashboard
           </span>
           <button
-            onClick={() => navigate("/adminPanel/overview")}
+            onClick={() => {
+              navigate("/adminPanel/overview");
+              setFocusAdd(false);
+              setFocusManage(false);
+            }}
             className={
-              focus
+              focusView
                 ? "text-blue-500"
                 : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
             }
@@ -49,9 +55,15 @@ const Aside = () => {
           </span>
           <button
             onClick={() => {
-              setFocus(false);
+              setFocusView(false);
+              setFocusAdd(false);
+              setFocusManage(true);
             }}
-            className="cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+           className={
+              focusManage
+                ? "text-blue-500"
+                : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+            }
           >
             Gerir Resultados
           </button>
@@ -65,9 +77,15 @@ const Aside = () => {
           </span>
           <button
             onClick={() => {
-              setFocus(false);
+              setFocusView(false);
+              setFocusAdd(true);
+              setFocusManage(false);
             }}
-            className="cursor-pointer   hover:text-blue-500 focus:text-blue-500"
+            className={
+              focusAdd
+                ? "text-blue-500"
+                : "cursor-pointer  hover:text-blue-500 focus:text-blue-500"
+            }
           >
             Adicionar novos resultados
           </button>
