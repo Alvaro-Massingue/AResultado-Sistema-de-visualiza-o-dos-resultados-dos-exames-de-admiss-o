@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { resultsMock } from "../data/results.mock";
 
 const SearchResults = (props) => {
@@ -21,6 +21,8 @@ const SearchResults = (props) => {
   const [periods, setPeriods] = useState("");
   const [errorC, setErrorC] = useState(false);
   const [errorP, setErrorp] = useState(false);
+  const [selectCourses, setSelectCourses] = useState(false);
+  const [selectPeriods, setSelectPeriods] = useState(false);
 
   return (
     <div className="w-full flex flex-wrap gap-2 min-h-45 justify-center items-center pt-3 pb-5">
@@ -40,19 +42,32 @@ const SearchResults = (props) => {
         )}
         <select
           id="course"
-          value={course}
-          onChange={(event) => setCourse(event.target.value)}
+          onClick={() => setSelectCourses(!selectCourses)}
           className={`${errorC ? "border border-red-600" : "border border-blue-400"} pl-2 text-blue-400 font-extralight outline-0 rounded-2xl h-10 w-full`}
         >
-          <option value="" disabled hidden></option>
+          <option value={course} hidden selected>
+            {course}
+          </option>
+        </select>
+        {selectCourses?(
+             <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
           {selectCourse.map((courseList, index) => {
             return (
-              <option key={index} value={courseList}>
-                {courseList}
-              </option>
+              <input
+                className=" w-full text-start hover:text-sky-500"
+                type="button"
+                key={index}
+                value={courseList}
+                onClick={(event) => {
+                  setCourse(event.target.value);
+                  setSelectCourses(false);
+                }}
+              />
             );
           })}
-        </select>
+        </div>
+        ):""}
+       
       </div>
 
       <label
@@ -71,19 +86,32 @@ const SearchResults = (props) => {
         )}
         <select
           id="period"
-          value={periods}
-          onChange={(event) => setPeriods(event.target.value)}
+          onClick={() => setSelectPeriods(!selectPeriods)}
           className={`${errorP ? "border border-red-600" : "border border-blue-400"} font-extralight text-blue-400 pl-2 outline-0 rounded-2xl h-10 w-full`}
         >
-          <option value="" disabled hidden></option>
+          <option value={periods} hidden selected>
+            {periods}
+          </option>
+        </select>
+        {selectPeriods?(
+             <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
           {selectPeriod.map((periodList, index) => {
             return (
-              <option key={index} value={periodList}>
-                {periodList}
-              </option>
+              <input
+                className=" w-full text-start hover:text-sky-500"
+                type="button"
+                key={index}
+                value={periodList}
+                onClick={(event) => {
+                  setPeriods(event.target.value);
+                  setSelectPeriods(false);
+                }}
+              />
             );
           })}
-        </select>
+        </div>
+        ):""}
+       
       </div>
 
       <button
@@ -103,7 +131,7 @@ const SearchResults = (props) => {
             setErrorp(false);
           }
         }}
-        className="border border-sky-500 bg-sky-500 mt-5 md:mt-0 text-white outline-0 cursor-pointer rounded-2xl h-10 basis-70 shrink grow-0 md:hover:border md:hover:bg-blue-700 md:basis-40"
+        className="border border-blue-500 bg-blue-500 mt-5 md:mt-0 text-white outline-0 cursor-pointer rounded-2xl h-10 basis-70 shrink grow-0 md:hover:border md:hover:bg-blue-700 md:basis-40"
       >
         Vizualizar
       </button>
