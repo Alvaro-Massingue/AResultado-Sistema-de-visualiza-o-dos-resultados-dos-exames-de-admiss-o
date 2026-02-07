@@ -49,25 +49,26 @@ const SearchResults = (props) => {
             {course}
           </option>
         </select>
-        {selectCourses?(
-             <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
-          {selectCourse.map((courseList, index) => {
-            return (
-              <input
-                className=" w-full text-start hover:text-sky-500"
-                type="button"
-                key={index}
-                value={courseList}
-                onClick={(event) => {
-                  setCourse(event.target.value);
-                  setSelectCourses(false);
-                }}
-              />
-            );
-          })}
-        </div>
-        ):""}
-       
+        {selectCourses ? (
+          <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
+            {selectCourse.map((courseList, index) => {
+              return (
+                <input
+                  className=" w-full text-start hover:text-sky-500"
+                  type="button"
+                  key={index}
+                  value={courseList}
+                  onClick={(event) => {
+                    setCourse(event.target.value);
+                    setSelectCourses(false);
+                  }}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
 
       <label
@@ -93,25 +94,26 @@ const SearchResults = (props) => {
             {periods}
           </option>
         </select>
-        {selectPeriods?(
-             <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
-          {selectPeriod.map((periodList, index) => {
-            return (
-              <input
-                className=" w-full text-start hover:text-sky-500"
-                type="button"
-                key={index}
-                value={periodList}
-                onClick={(event) => {
-                  setPeriods(event.target.value);
-                  setSelectPeriods(false);
-                }}
-              />
-            );
-          })}
-        </div>
-        ):""}
-       
+        {selectPeriods ? (
+          <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
+            {selectPeriod.map((periodList, index) => {
+              return (
+                <input
+                  className=" w-full text-start hover:text-sky-500"
+                  type="button"
+                  key={index}
+                  value={periodList}
+                  onClick={(event) => {
+                    setPeriods(event.target.value);
+                    setSelectPeriods(false);
+                  }}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
 
       <button
@@ -130,6 +132,8 @@ const SearchResults = (props) => {
             setErrorC(false);
             setErrorp(false);
           }
+          setSelectCourses(false);
+          setSelectPeriods(false);
         }}
         className="border border-blue-500 bg-blue-500 mt-5 md:mt-0 text-white outline-0 cursor-pointer rounded-2xl h-10 basis-70 shrink grow-0 md:hover:border md:hover:bg-blue-700 md:basis-40"
       >
