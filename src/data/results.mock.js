@@ -136,7 +136,7 @@ export const resultsMock = [
 
   {
     id: 11,
-    fullName: "Emerspn Sergio",
+    fullName: "Emerson Sergio",
     period: "Laboral",
     course: "Engenharia em Tecnologias e Sistemas de Informação",
     grades: {
