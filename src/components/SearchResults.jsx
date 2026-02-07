@@ -45,7 +45,7 @@ const SearchResults = (props) => {
           onClick={() => setSelectCourses(!selectCourses)}
           className={`${errorC ? "border border-red-600" : "border border-blue-400"} pl-2 text-blue-400 font-extralight outline-0 rounded-2xl h-10 w-full`}
         >
-          <option value={course} hidden selected>
+          <option value={course} hidden>
             {course}
           </option>
         </select>
@@ -89,7 +89,7 @@ const SearchResults = (props) => {
           onClick={() => setSelectPeriods(!selectPeriods)}
           className={`${errorP ? "border border-red-600" : "border border-blue-400"} font-extralight text-blue-400 pl-2 outline-0 rounded-2xl h-10 w-full`}
         >
-          <option value={periods} hidden selected>
+          <option value={periods} hidden>
             {periods}
           </option>
         </select>
