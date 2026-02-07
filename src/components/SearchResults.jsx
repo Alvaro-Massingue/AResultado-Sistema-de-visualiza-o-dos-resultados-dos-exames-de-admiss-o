@@ -54,7 +54,7 @@ const SearchResults = (props) => {
             {selectCourse.map((courseList, index) => {
               return (
                 <input
-                  className=" w-full text-start hover:text-sky-500"
+                  className=" w-full text-start hover:text-sky-500 p-2"
                   type="button"
                   key={index}
                   value={courseList}
@@ -99,7 +99,7 @@ const SearchResults = (props) => {
             {selectPeriod.map((periodList, index) => {
               return (
                 <input
-                  className=" w-full text-start hover:text-sky-500"
+                  className=" w-full text-start hover:text-sky-500 p-2"
                   type="button"
                   key={index}
                   value={periodList}
