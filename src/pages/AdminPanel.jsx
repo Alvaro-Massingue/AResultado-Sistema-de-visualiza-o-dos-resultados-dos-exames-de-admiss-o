@@ -1,8 +1,8 @@
 import Header from "../components/Header";
 import Aside from "../components/Aside";
 import OverView from "../components/Overview";
-import ManageResults from "../components/ManageResults"
-import AddResults from "../components/AddResults"
+import ManageResults from "../components/ManageResults";
+import AddResults from "../components/AddResults";
 import { useEffect, useState } from "react";
 
 const AdminPanel = () => {
@@ -26,10 +26,9 @@ const AdminPanel = () => {
           focusAdd={focusAdd}
           setFocusAdd={setFocusAdd}
         />
-        {focusView?<OverView/>:""}
-        {focusManage?<ManageResults/>:""}
-        {focusAdd?<AddResults/>:""}
-        
+        {focusView && <OverView />}
+        {focusManage && <ManageResults />}
+        {focusAdd && <AddResults />}
       </div>
     </div>
   );
