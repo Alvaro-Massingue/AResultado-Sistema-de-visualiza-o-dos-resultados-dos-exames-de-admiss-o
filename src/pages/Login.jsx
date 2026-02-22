@@ -67,16 +67,20 @@ const Login = () => {
             if (user == "" && password == "") {
               setErrorUser(true);
               setErrorPass(true);
+              setResponse("");
             } else if (user == "") {
               setErrorUser(true);
               setErrorPass(false);
+              setResponse("");
             } else if (password == "") {
               setErrorPass(true);
               setErrorUser(false);
+              setResponse("");
             } else {
               login(user, password);
               !setErrorUser();
               !setErrorPass();
+              
             }
           }}
         >
