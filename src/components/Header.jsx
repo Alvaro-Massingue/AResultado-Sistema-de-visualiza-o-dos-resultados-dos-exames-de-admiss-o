@@ -11,9 +11,9 @@ const Header = (props) => {
 
   return (
     <div
-      className={"fixed top-0 left-0 z-10 flex w-full items-center flex-wrap bg-sky-500 shadow-md  shadow-gray-500 pr-5"}
+      className={"fixed top-0 left-0 z-10 flex w-full items-center h-18 md:h-23 flex-wrap bg-sky-500 shadow-md  shadow-gray-500 pr-5"}
     >
-      <div className="flex items-center w-1/2">
+      <div className="flex items-center w-1/2 ">
         <img src={logo} className="w-15 md:w-20" />
       </div>
       <div className="w-1/2 text-right">
