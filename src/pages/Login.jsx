@@ -33,36 +33,53 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full bg-linear-to-t from-sky-50 via-sky-50 to-white m-0 flex flex-col items-center gap-10 h-screen">
+    <div className="w-full bg-linear-to-t from-sky-50 via-sky-50 to-white m-0 flex flex-col items-center gap-10 h-full">
       <Header isAuthenticated={true} />
-      <div className="w-[90%] h-3/4 bg-white rounded-2xl mt-25 shadow shadow-gray-400 flex flex-col justify-center items-center gap-2 shrink md:w-[25%]">
-        <p className="text-red-600 text-sm w-[80%]">{response}</p>
+      <div className="w-[90%] min-h-3/4 bg-white rounded-2xl mt-32 mb-5 shadow shadow-gray-400 flex flex-col justify-center items-center gap-2 shrink md:w-[25%]">
+      <div className="flex flex-wrap wrap-break-word shrink m-5">
+        <h1 className="text-sky-500 font-bold text-xl md:text-2xl w-[60%]">Bem vindo</h1>
+        <p className="text-gray-800">Acesse a sua conta</p>
+      </div>
+      <div className="w-[80%] border bg-gray-200 min-h-25 p-3 flex flex-wrap justify-center wrap-break-word shrink gap-2 rounded-xl border-gray-400">
+      <span
+          className="material-symbols-outlined basis-[10%] grow-0 shrink  text-sky-500 
+          [font-variation-settings:'FILL'_1,'wght'_800,'GRAD'_0,'opsz'_24]"
+        >
+          person
+        </span>
+        <div className="text-sm text-gray-800 shrink">
+          <h1 className="font-medium text-base text-black">Administrador</h1>
+          <p>Usuario: admin</p>
+          <p>Palavra-passe: admin</p>
+        </div>
+      </div>
+        <p className="text-red-600 text-sm md:text-base w-[80%]">{response}</p>
         {errorUser ? (
-          <p className=" text-red-600 text-sm w-[80%]">Preencha este campo</p>
+          <p className=" text-red-600 text-sm md:text-base w-[80%]">Preencha este campo</p>
         ) : (
-          <p className=" text-gray-700 font-medium w-[80%]">Usuario</p>
+          <p className=" text-gray-800 w-[80%]">Usuario</p>
         )}
         <input
-          className="h-10 w-[80%] border border-gray-400 rounded-2xl text-gray-600 outline-0 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
+          className="h-10 w-[80%] border bg-linear-to-t from-sky-50 via-sky-50 to-white border-gray-400 rounded-xl text-gray-800 outline-0 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="text"
           placeholder="admin"
           value={user}
           onChange={(event) => setUser(event.target.value)}
         />
         {errorPass ? (
-          <p className=" text-red-600 text-sm w-[80%]">Preencha este campo</p>
+          <p className=" text-red-600 text-sm md:text-base w-[80%]">Preencha este campo</p>
         ) : (
-          <p className=" text-gray-700 font-medium w-[80%]">Palavra-passe</p>
+          <p className=" text-gray-800 w-[80%]">Palavra-passe</p>
         )}
         <input
-          className="h-10 w-[80%] border border-gray-400 rounded-2xl outline-0 text-gray-600 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
+          className="h-10 w-[80%] border focus:text-base text-xl bg-linear-to-t from-sky-50 via-sky-50 to-white border-gray-400 rounded-xl outline-0 text-gray-800 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="password"
           placeholder="*****"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
         <button
-          className="w-[80%] h-10 bg-sky-500 text-white rounded-2xl mt-5 cursor-pointer md:hover:border md:hover:bg-blue-700"
+          className="w-[80%] mb-5 h-10 bg-sky-500 text-white rounded-xl mt-5 cursor-pointer md:hover:border md:hover:bg-blue-700"
           onClick={() => {
             if (user == "" && password == "") {
               setErrorUser(true);
