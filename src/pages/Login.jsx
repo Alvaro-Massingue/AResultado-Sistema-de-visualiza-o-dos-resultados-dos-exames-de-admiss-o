@@ -45,7 +45,7 @@ const Login = () => {
         <input
           className="h-10 w-[80%] border border-gray-400 rounded-2xl text-gray-600 outline-0 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="text"
-          placeholder="Adimin"
+          placeholder="admin"
           value={user}
           onChange={(event) => setUser(event.target.value)}
         />
@@ -57,7 +57,7 @@ const Login = () => {
         <input
           className="h-10 w-[80%] border border-gray-400 rounded-2xl outline-0 text-gray-600 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="password"
-          placeholder="Palavra-passe"
+          placeholder="*****"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
