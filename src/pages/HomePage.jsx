@@ -26,7 +26,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden md:h-screen h-full">
+    <div className="overflow-x-hidden  h-screen">
       <Header isAuthenticated={false} />
       <Welcome />
       <SearchResults seeResult={seeResult} results={results} />
