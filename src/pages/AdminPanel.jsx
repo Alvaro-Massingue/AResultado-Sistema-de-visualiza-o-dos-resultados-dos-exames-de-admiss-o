@@ -15,7 +15,7 @@ const AdminPanel = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-gray-50">
       <Header isAuthenticated={true} />
       <div className="flex mt-15 md:mt-20">
         <Aside

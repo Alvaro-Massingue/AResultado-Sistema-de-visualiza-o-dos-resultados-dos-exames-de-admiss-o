@@ -4,21 +4,11 @@ import Login from "./pages/Login";
 import AdminPanel from "./pages/AdminPanel";
 
 const App = () => {
-  
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<HomePage />}
-      />
-      <Route 
-      path="/login" 
-      element={<Login />} 
-      />
-      <Route 
-      path="/adminPanel" 
-      element={<AdminPanel />} 
-      />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/adminPanel" element={<AdminPanel />} />
     </Routes>
   );
 };

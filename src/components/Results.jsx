@@ -8,7 +8,9 @@ const Results = (props) => {
         >
           <div className="flex gap-2">
             <p className="text-gray-700 ">Curso:</p>
-            <p className="text-sky-500 text-sm md:text-base font-bold">{result.course.toUpperCase()}</p>
+            <p className="text-sky-500 text-sm md:text-base font-bold">
+              {result.course.toUpperCase()}
+            </p>
           </div>
           <div className="flex gap-2">
             <p className="text-gray-700 ">Periodo:</p>

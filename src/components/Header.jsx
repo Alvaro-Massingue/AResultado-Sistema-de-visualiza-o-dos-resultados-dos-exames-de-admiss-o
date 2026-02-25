@@ -11,7 +11,9 @@ const Header = (props) => {
 
   return (
     <div
-      className={"fixed top-0 left-0 z-10 flex w-full items-center h-18 md:h-23 flex-wrap bg-sky-500 shadow-md  shadow-gray-500 pr-5"}
+      className={
+        "fixed top-0 left-0 z-10 flex w-full items-center h-18 md:h-23 flex-wrap bg-sky-500 shadow-md  shadow-gray-500 pr-5"
+      }
     >
       <div className="flex items-center w-1/2 ">
         <img src={logo} className="w-15 md:w-20" />
@@ -20,20 +22,19 @@ const Header = (props) => {
         {props.isAuthenticated ? (
           <div className="flex justify-end">
             <span
-             onClick={() => navigate("/")}
+              onClick={() => navigate("/")}
               className="material-symbols-outlined  text-white cursor-pointer
           [font-variation-settings:'FILL'_1,'wght'_400,'GRAD'_0,'opsz'_24]"
             >
               logout
             </span>
             <button
-            onClick={() => navigate("/")}
-            className="text-white cursor-pointer"
-          >
-            Sair
-          </button>
+              onClick={() => navigate("/")}
+              className="text-white cursor-pointer"
+            >
+              Sair
+            </button>
           </div>
-          
         ) : (
           <div className="flex justify-end">
             <span
@@ -43,13 +44,13 @@ const Header = (props) => {
             >
               login
             </span>
-             <button
-            onClick={() => loginPanel()}
-            className="text-white cursor-pointer"
-          >
-            Login
-          </button>
-          </div>         
+            <button
+              onClick={() => loginPanel()}
+              className="text-white cursor-pointer"
+            >
+              Login
+            </button>
+          </div>
         )}
       </div>
     </div>

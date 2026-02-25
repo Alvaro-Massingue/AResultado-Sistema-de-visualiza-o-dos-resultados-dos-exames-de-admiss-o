@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function HomePage() {
   const [results, setResults] = useState([]);
+  const [statusSearch, setStatusSearch] = useState(false);
 
   const seeResult = (course, period) => {
     if (course != "" && period != "") {
@@ -14,6 +15,9 @@ export default function HomePage() {
         (result) => result.course === course && result.period === period,
       );
       setResults(newResult);
+      setStatusSearch(true);
+    } else {
+      setStatusSearch(false);
     }
   };
 
@@ -22,11 +26,11 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden ">
+    <div className="overflow-x-hidden md:h-screen h-full">
       <Header isAuthenticated={false} />
       <Welcome />
       <SearchResults seeResult={seeResult} results={results} />
-      <Results results={results} />
+      {statusSearch && <Results results={results} />}
     </div>
   );
 }

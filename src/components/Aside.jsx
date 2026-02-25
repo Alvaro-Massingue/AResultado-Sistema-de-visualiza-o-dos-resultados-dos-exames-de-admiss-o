@@ -37,7 +37,7 @@ const Aside = ({
             }}
             className={
               focusView
-                ? "text-sky-500"
+                ? "text-sky-500 cursor-pointer"
                 : "cursor-pointer  hover:text-sky-500 focus:text-sky-500"
             }
           >
@@ -59,7 +59,7 @@ const Aside = ({
             }}
             className={
               focusManage
-                ? "text-sky-500"
+                ? "text-sky-500 cursor-pointer"
                 : "cursor-pointer  hover:text-sky-500 focus:text-sky-500"
             }
           >
@@ -81,7 +81,7 @@ const Aside = ({
             }}
             className={
               focusAdd
-                ? "text-sky-500"
+                ? "text-sky-500 cursor-pointer"
                 : "cursor-pointer  hover:text-sky-500 focus:text-sky-500"
             }
           >

@@ -25,7 +25,7 @@ const SearchResults = (props) => {
   const [selectPeriods, setSelectPeriods] = useState(false);
 
   return (
-    <div className="w-full flex border-b-4 border-gray-200 flex-wrap gap-2 min-h-45 md:items-start justify-center items-center pt-3 pb-5">
+    <div className="w-full flex border-b-2 border-gray-300 flex-wrap gap-2 min-h-45 md:items-start justify-center items-center pt-3 pb-5">
       <label
         className=" text-gray-600 basis-70 shrink grow-0 md:basis-1"
         htmlFor="course"
@@ -38,7 +38,7 @@ const SearchResults = (props) => {
             Preencha este campo
           </p>
         ) : (
-          ""
+          ""  
         )}
         <select
           id="course"
@@ -54,7 +54,7 @@ const SearchResults = (props) => {
             {selectCourse.map((courseList, index) => {
               return (
                 <input
-                  className=" w-full text-start hover:text-sky-500 p-2"
+                  className=" w-full text-start hover:text-sky-500 p-2 cursor-pointer"
                   type="button"
                   key={index}
                   value={courseList}
@@ -99,7 +99,7 @@ const SearchResults = (props) => {
             {selectPeriod.map((periodList, index) => {
               return (
                 <input
-                  className=" w-full text-start hover:text-sky-500 p-2"
+                  className=" w-full text-start hover:text-sky-500 p-2 cursor-pointer"
                   type="button"
                   key={index}
                   value={periodList}
