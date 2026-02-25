@@ -66,7 +66,7 @@ const Login = () => {
         <input
           className="h-10 w-[80%] border bg-gray-50 border-gray-400 rounded-xl text-gray-800 outline-0 focus:border focus:border-sky-500 focus:text-sky-500 pl-3"
           type="text"
-          placeholder="admin"
+          placeholder="nome"
           value={user}
           onChange={(event) => setUser(event.target.value)}
         />
