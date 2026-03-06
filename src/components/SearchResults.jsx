@@ -25,7 +25,7 @@ const SearchResults = (props) => {
   const [selectPeriods, setSelectPeriods] = useState(false);
 
   return (
-    <div className="w-full shadow-sm flex bg-white flex-wrap gap-2 min-h-45 md:min-h-25 md:items-start justify-center items-center pt-3 pb-5">
+    <div className="w-full shadow-sm flex md:p-10 bg-white flex-wrap gap-2 min-h-45 md:min-h-25 md:items-start justify-center items-center pt-3 pb-5">
       <label
         className=" text-gray-600 basis-70 shrink grow-0 md:basis-1"
         htmlFor="course"
@@ -77,7 +77,7 @@ const SearchResults = (props) => {
       >
         Periodo
       </label>
-      <div className="min-h-10 md:h-10 w-1/2 basis-70 shrink grow-0">
+      <div className="min-h-10 md:min-h-10 w-1/2 basis-70 shrink grow-0">
         {errorP ? (
           <p className="text-red-600 text-sm md:text-base basis-70 shrink mb-2 grow-0 md:basis-1">
             Preencha este campo
