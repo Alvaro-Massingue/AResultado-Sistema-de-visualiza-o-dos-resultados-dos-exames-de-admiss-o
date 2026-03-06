@@ -26,7 +26,7 @@ const Welcome = () => {
           </h1>
           
         </div>
-        <div className="p-2 bg-sky-200 border-sky-400 text-sky-900 opacity-60 md:basis-150 md:text-xl border min-h-10 basis-85 text-center shrink grow-0 flex items-center justify-center rounded-2xl wrap-break-word flex-wrap">
+        <div className="p-2 bg-sky-200 border-sky-400 text-sky-900 opacity-60 md:basis-150 md:text-xl border min-h-10 basis-85 text-center shrink md:grow-0 grow mx-2 flex items-center justify-center rounded-2xl wrap-break-word flex-wrap">
             <h1>Consulta os resultados dos exames aqui</h1>
           </div>
       </div>
