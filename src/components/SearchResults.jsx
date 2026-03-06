@@ -25,7 +25,7 @@ const SearchResults = (props) => {
   const [selectPeriods, setSelectPeriods] = useState(false);
 
   return (
-    <div className="w-full flex flex-wrap gap-2 min-h-45 md:items-start justify-center items-center pt-3 pb-5">
+    <div className="w-full shadow-sm flex bg-white flex-wrap gap-2 min-h-45 md:min-h-25 md:items-start justify-center items-center pt-3 pb-5">
       <label
         className=" text-gray-600 basis-70 shrink grow-0 md:basis-1"
         htmlFor="course"

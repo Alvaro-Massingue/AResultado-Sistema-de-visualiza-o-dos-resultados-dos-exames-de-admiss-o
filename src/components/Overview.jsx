@@ -9,7 +9,7 @@ const OverView = () => {
     return result.status.toLowerCase() == "reprovado";
   });
   return (
-    <div className="w-3/4 flex flex-col gap-40 absolute right-0">
+    <div className="w-3/4 flex flex-col gap-40 absolute right-0 ">
       <div className="flex flex-wrap justify-center mt-10 gap-4 ">
         <div className="w-[30%] h-50 shadow-lg border border-gray-300 shadow-gray-300 rounded-2xl">
           <h1 className="font-bold text-7xl ml-3 ">{resultsMock.length}</h1>

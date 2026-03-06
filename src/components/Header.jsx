@@ -12,7 +12,7 @@ const Header = (props) => {
   return (
     <div
       className={
-        "fixed top-0 left-0 z-10 flex w-full items-center h-18 md:h-23 flex-wrap bg-sky-500 shadow-md  shadow-gray-500 pr-5"
+        "fixed top-0 left-0 z-10 flex w-full items-center h-18 md:h-23 flex-wrap bg-sky-500 shadow-sm  shadow-gray-500 pr-5"
       }
     >
       <div className="flex items-center w-1/2 ">

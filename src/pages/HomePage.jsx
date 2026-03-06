@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function HomePage() {
   const [results, setResults] = useState([]);
   const [statusSearch, setStatusSearch] = useState(false);
-
+ 
   const seeResult = (course, period) => {
     if (course != "" && period != "") {
       let newResult = resultsMock.filter(
