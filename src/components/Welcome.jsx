@@ -9,13 +9,13 @@ const Welcome = () => {
 
   useEffect(() => {
     if (index < description.length) {
-      const descriptionText = setInterval(() => {
+      const descriptionText = setTimeout(() => {
         setShowDescription((prev) => prev + description[index]);
         setIndex(index + 1);
       }, 60);
-      return () => clearInterval(descriptionText);
+      return () => clearTimeout(descriptionText);
     }
-  }, [index]);
+  }, [index,description]);
 
   return (
     <div className="w-full md:h-100 h-95  m-0 mt-10 md:mt-20  flex items-center flex-wrap wrap-break-word bg-[url('./assets/background.jpg')] bg-center bg-fixed bg-contain">
