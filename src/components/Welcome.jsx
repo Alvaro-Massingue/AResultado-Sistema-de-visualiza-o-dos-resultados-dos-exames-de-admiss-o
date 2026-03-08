@@ -21,7 +21,7 @@ const Welcome = () => {
     <div className="w-full md:h-100 h-95  m-0 mt-10 md:mt-20  flex items-center flex-wrap wrap-break-word bg-[url('./assets/background.jpg')] bg-center bg-fixed bg-contain">
       <div className=" basis-full grow shrink flex justify-center items-center flex-wrap gap-10">
         <div className="h-3/4 flex justify-center items-center text-center md:w-[70%] w-full ">
-          <h1 className="text-3xl font-black bg-linear-to-r from-sky-400 via-sky-500 to-blue-700 bg-clip-text text-transparent md:text-5xl">
+          <h1 className="text-3xl font-black bg-linear-to-t from-sky-400 via-sky-500 to-blue-700 bg-clip-text text-transparent md:text-5xl">
             {showDescription}
           </h1>
         </div>
