@@ -15,7 +15,7 @@ Este projeto tem como objetivo disponibilizar uma interface simples, segura e in
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Alvaro-Massingue/AResultado-Sistema-de-visualiza-o-dos-resultados-dos-exames-de-admiss-o
    ```
 
 2. Acesse a pasta do projeto:
