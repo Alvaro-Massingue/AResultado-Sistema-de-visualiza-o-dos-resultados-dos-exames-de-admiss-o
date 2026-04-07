@@ -77,7 +77,7 @@ const SearchResults = (props) => {
       >
         Periodo
       </label>
-      <div className="min-h-10 md:min-h-10 w-1/2 basis-70 shrink grow-0">
+      <div className="md:relative min-h-10 md:min-h-10 w-1/2 basis-70 shrink grow-0">
         {errorP ? (
           <p className="text-red-600 text-sm md:text-base basis-70 shrink mb-2 grow-0 md:basis-1">
             Preencha este campo
@@ -95,7 +95,7 @@ const SearchResults = (props) => {
           </option>
         </select>
         {selectPeriods ? (
-          <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
+          <div className="md:absolute md:z-[100] md:top-11 shadow-sm border-gray-300 border w-full p-2 rounded-xl">
             {selectPeriod.map((periodList, index) => {
               return (
                 <input
