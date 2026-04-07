@@ -25,14 +25,14 @@ const SearchResults = (props) => {
   const [selectPeriods, setSelectPeriods] = useState(false);
 
   return (
-    <div className="w-full shadow-sm flex md:p-10 bg-white flex-wrap gap-2 min-h-45 md:min-h-25 md:items-start justify-center items-center pt-3 pb-5">
+    <div className="w-full shadow-sm flex md:p-10 bg-white flex-wrap gap-2 min-h-45 md:min-h-90 md:items-center justify-center items-center pt-3 pb-5">
       <label
         className=" text-gray-600 basis-70 shrink grow-0 md:basis-1"
         htmlFor="course"
       >
         Curso
       </label>
-      <div className="min-h-10 md:min-h-10 w-1/2 basis-70 shrink grow-0">
+      <div className="md:relative min-h-10 md:min-h-10 w-1/2 basis-70 shrink grow-0">
         {errorC ? (
           <p className="text-red-600 text-sm md:text-base basis-70 shrink mb-2 grow-0 md:basis-1">
             Preencha este campo
@@ -50,7 +50,7 @@ const SearchResults = (props) => {
           </option>
         </select>
         {selectCourses ? (
-          <div className="shadow-sm border-gray-300 border w-full p-2 rounded-xl">
+          <div className="md:absolute md:z-[100] bg-white md:left-0 md:top-11 shadow-sm border-gray-300 border w-full p-2 rounded-xl">
             {selectCourse.map((courseList, index) => {
               return (
                 <input
