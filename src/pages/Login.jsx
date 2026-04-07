@@ -33,16 +33,16 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full bg-gray-50 m-0 flex flex-col items-center gap-10 h-screen">
+    <div className="w-full bg-gray-50 m-0 flex flex-col items-center gap-10 h-screen md:h-full">
       <Header isAuthenticated={true} />
-      <div className="w-[90%] h-screen bg-white mb-7  rounded-2xl mt-32 shadow shadow-gray-400 flex flex-col justify-center items-center gap-2 shrink md:w-[25%]">
+      <div className="w-[90%] h-screen bg-white mb-7  rounded-2xl mt-32 shadow shadow-gray-400 flex flex-col justify-center items-center gap-2 shrink md:w-[30%]">
         <div className="flex flex-wrap wrap-break-word shrink m-5">
           <h1 className="text-sky-500 font-bold text-xl md:text-2xl w-[60%]">
             Bem vindo
           </h1>
           <p className="text-gray-800">Acesse a sua conta</p>
         </div>
-        <div className="w-[80%] border bg-gray-200 min-h-25 p-3 flex flex-wrap justify-start wrap-break-word shrink gap-2 rounded-xl border-gray-400">
+        <div className="w-[80%] border bg-gray-50 min-h-25 p-3 flex flex-wrap justify-start wrap-break-word shrink gap-2 rounded-xl border-gray-400">
           <span
             className="material-symbols-outlined basis-[10%] grow-0 shrink  text-sky-500 
           [font-variation-settings:'FILL'_1,'wght'_800,'GRAD'_0,'opsz'_24]"
