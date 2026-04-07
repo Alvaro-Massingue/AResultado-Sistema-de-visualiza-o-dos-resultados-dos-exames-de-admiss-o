@@ -25,7 +25,7 @@ const SearchResults = (props) => {
   const [selectPeriods, setSelectPeriods] = useState(false);
 
   return (
-    <div className="w-full shadow-sm flex md:p-10 bg-white flex-wrap gap-2 min-h-45 md:min-h-90 md:items-center justify-center items-center pt-3 pb-5">
+    <div className="w-full flex md:p-10 bg-white flex-wrap gap-2 min-h-45 md:min-h-70 md:items-center justify-center items-center pt-3 pb-5">
       <label
         className=" text-gray-600 basis-70 shrink grow-0 md:basis-1"
         htmlFor="course"
@@ -50,7 +50,7 @@ const SearchResults = (props) => {
           </option>
         </select>
         {selectCourses ? (
-          <div className="md:absolute md:z-[100] bg-white md:left-0 md:top-11 shadow-sm border-gray-300 border w-full p-2 rounded-xl">
+          <div className="md:absolute md:z-9 bg-white md:left-0 md:top-11 shadow-sm border-gray-300 border w-full p-2 rounded-xl">
             {selectCourse.map((courseList, index) => {
               return (
                 <input
@@ -95,7 +95,7 @@ const SearchResults = (props) => {
           </option>
         </select>
         {selectPeriods ? (
-          <div className="md:absolute md:z-[100] md:top-11 shadow-sm border-gray-300 border w-full p-2 rounded-xl">
+          <div className="md:absolute md:z-9 md:top-11 shadow-sm bg-white border-gray-300 border w-full p-2 rounded-xl">
             {selectPeriod.map((periodList, index) => {
               return (
                 <input

@@ -19,7 +19,7 @@ const Welcome = () => {
 
   return (
     <div
-      className="w-full md:h-100 h-95  m-0 mt-10 md:mt-20  flex items-center flex-wrap wrap-break-word"
+      className="w-full md:min-h-100 h-95 m-0 mt-10 md:mt-20  flex items-center flex-wrap wrap-break-word"
       style={{
         background: `repeating-linear-gradient(to right,transparent 0px,transparent 45px,rgba(0, 128, 255, 0.100) 45px,rgba(0, 128, 255, 0.100) 46px),repeating-linear-gradient(to bottom,transparent 0px,transparent 45px,rgba(0, 128, 255, 0.100)  45px,rgba(0, 128, 255, 0.100) 46px
 )`}}
