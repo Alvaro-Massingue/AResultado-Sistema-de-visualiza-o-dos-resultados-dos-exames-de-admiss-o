@@ -18,7 +18,7 @@ const OverView = () => {
     if (total < resultsMock.length) {
       const showTotal = setTimeout(() => {
         setTotal(total + 1);
-      }, 50);
+      }, 3);
       return () => clearTimeout(showTotal);
     }
   }, [total]);
@@ -29,7 +29,7 @@ const OverView = () => {
         const showPassed = setTimeout(() => {
           setPassed(passed + 1);
           return () => clearTimeout(showPassed);
-        }, 40);
+        }, 2);
       }
     }
   }, [total, passed]);
@@ -40,7 +40,7 @@ const OverView = () => {
         const showFailed = setTimeout(() => {
           setFailed(failed + 1);
           return () => clearTimeout(showFailed);
-        }, 30);
+        }, 1);
       }
     }
   }, [passed, failed]);
