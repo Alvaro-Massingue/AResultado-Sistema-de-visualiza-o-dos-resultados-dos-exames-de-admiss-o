@@ -1,6 +1,11 @@
+import { useEffect, useState } from "react";
 import { resultsMock } from "../data/results.mock";
 
 const OverView = () => {
+  const [total, setTotal] = useState(0);
+  const [passed, setPassed] = useState(0);
+  const [failed, setFailed] = useState(0);
+
   const aprovados = resultsMock.filter((result) => {
     return result.status.toLowerCase() == "aprovado";
   });
@@ -8,11 +13,43 @@ const OverView = () => {
   const reprovados = resultsMock.filter((result) => {
     return result.status.toLowerCase() == "reprovado";
   });
+
+  useEffect(() => {
+    if (total < resultsMock.length) {
+      const showTotal = setTimeout(() => {
+        setTotal(total + 1);
+      }, 50);
+      return () => clearTimeout(showTotal);
+    }
+  }, [total]);
+
+  useEffect(() => {
+    if (total == resultsMock.length) {
+      if (passed < aprovados.length) {
+        const showPassed = setTimeout(() => {
+          setPassed(passed + 1);
+          return () => clearTimeout(showPassed);
+        }, 40);
+      }
+    }
+  }, [total, passed]);
+
+  useEffect(() => {
+    if (passed == aprovados.length) {
+      if (failed < reprovados.length) {
+        const showFailed = setTimeout(() => {
+          setFailed(failed + 1);
+          return () => clearTimeout(showFailed);
+        }, 30);
+      }
+    }
+  }, [passed, failed]);
+
   return (
     <div className="w-3/4 flex flex-col bg-gray-50 gap-40 absolute right-0 ">
       <div className="flex flex-wrap justify-center mt-10 gap-4 ">
         <div className="w-[30%] h-50 bg-white shadow-lg  shadow-gray-300 rounded-2xl">
-          <h1 className="font-bold text-7xl ml-3 ">{resultsMock.length}</h1>
+          <h1 className="font-bold text-7xl ml-3 ">{total}</h1>
           <div className="flex items-center ml-5">
             <span
               className="material-symbols-outlined text-sky-500 
@@ -26,7 +63,7 @@ const OverView = () => {
           </div>
         </div>
         <div className="w-[30%] bg-white h-50 shadow-lg shadow-gray-300  rounded-2xl">
-          <h1 className="font-bold text-7xl ml-3">{aprovados.length}</h1>
+          <h1 className="font-bold text-7xl ml-3">{passed}</h1>
           <div className="flex items-center ml-5">
             <span
               className="material-symbols-outlined  text-green-500 
@@ -40,7 +77,7 @@ const OverView = () => {
           </div>
         </div>
         <div className="w-[30%] h-50 bg-white shadow-lg shadow-gray-300 rounded-2xl">
-          <h1 className="font-bold text-7xl ml-3">{reprovados.length}</h1>
+          <h1 className="font-bold text-7xl ml-3">{failed}</h1>
           <div className="flex items-center ml-5">
             <span
               className="material-symbols-outlined text-red-500 
