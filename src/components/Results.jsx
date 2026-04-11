@@ -1,6 +1,6 @@
 const Results = (props) => {
   return (
-    <div className="flex flex-col md:mt-40 items-center shadow-lg shadow-black pt-6 pb-8 gap-10 bg-white">
+    <div className="flex flex-col md:mt-8 items-center  pt-6 pb-8 gap-10 bg-gray-50">
       {props.results.map((result) => (
         <div
           key={result.id}
