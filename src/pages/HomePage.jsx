@@ -5,6 +5,7 @@ import Welcome from "../components/Welcome";
 import TitleSearch from "../components/TitleSearch";
 import { resultsMock } from "../data/results.mock";
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   const [results, setResults] = useState([]);
@@ -27,12 +28,13 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className=" overflow-x-hidden h-screen">
+    <div className="overflow-x-hidden h-screen">
       <Header isAuthenticated={false} />
       <Welcome />
       <TitleSearch />
       <SearchResults seeResult={seeResult} results={results} />
       {statusSearch && <Results results={results} />}
+      <Footer/> 
     </div>
   );
 }
